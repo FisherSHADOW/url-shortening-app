@@ -12,6 +12,7 @@ module.exports = {
         DarkViolet: "hsl(257, 27%, 26%)",
         Red: "hsl(0, 87%, 67%)",
         lightCyan: "hsl(180, 50%, 66%)",
+        background: "#F0F1F6",
       },
     },
   },

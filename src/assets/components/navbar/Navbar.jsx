@@ -8,10 +8,12 @@ const Navbar = () => {
   };
   return (
     <div>
-      <div className="w-full h-20 flex flex-row items-center justify-between px-10 md:px-20">
+      <div className="w-full h-20 flex flex-row items-center  justify-between px-10 md:px-20">
         {/* logo */}
         <div>
-          <p className="text-VeryDarkViolet text-3xl font-[900]">Shortly</p>
+          <p className="text-VeryDarkViolet text-3xl font-[900] select-none">
+            Shortly
+          </p>
         </div>
         {/* hamburger button  */}
 
@@ -24,7 +26,7 @@ const Navbar = () => {
           </span>
         </button>
         {/* navbar >md, lg */}
-        <div className="hidden md:block md:w-full md:flex md:flex-row md:justify-between md:items-center text-sm">
+        <div className="hidden md:w-full md:flex md:flex-row md:justify-between md:items-center text-sm">
           <ul className="flex flex-row text-GrayishViolet font-bold gap-7 px-10">
             <li className="cursor-pointer hover:text-VeryDarkViolet">
               Features
@@ -52,7 +54,7 @@ const Navbar = () => {
       </div>
       {/* mobile menu */}
       {!open ? (
-        <div className="w-[75%] h-[450px] md:hidden mt-10 bg-DarkViolet flex flex-col justify-center items-center mx-auto rounded-xl font-bold text-xl text-white ">
+        <div className="w-[75%] h-[450px] md:hidden mt-10 bg-DarkViolet flex flex-col justify-center items-center m-auto rounded-xl absolute left-2.5 right-2.5 font-bold text-xl text-white ">
           <ul className="flex flex-col justify-center items-center gap-10 text-center ">
             <li className=" cursor-pointer">Features</li>
             <li className=" cursor-pointer">Pricing</li>
