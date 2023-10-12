@@ -4,7 +4,7 @@ import Navbar from "./assets/components/navbar/Navbar";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-background">
       <Navbar />
       <Hero />
       <MainSection />

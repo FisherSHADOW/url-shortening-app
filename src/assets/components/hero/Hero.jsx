@@ -3,15 +3,15 @@ import working from "../../images/illustration-working.svg";
 
 const Hero = () => {
   return (
-    <div>
+    <div className="bg-white">
       {/* hero start */}
-      <div className="w-full flex flex-col-reverse md:flex-row justify-center items-center text-center md:justify-evenly lg:justify-between md:items-center md:mt-10 ">
+      <div className="w-full h-[80vh] flex  flex-col-reverse md:flex-row justify-center items-center text-center md:justify-evenly lg:justify-between xl:justify-around md:items-center py-20 ">
         <div className="md:pl-[4.7rem] md:flex md:flex-col md:gap-1">
-          <h1 className="text-5xl mt-10 md:text-5xl lg:text-6xl md:text-left w-[28rem] font-bold text-VeryDarkBlue">
+          <h1 className="text-5xl mt-10 md:text-5xl lg:text-6xl md:text-left md:w-[28rem] font-bold text-VeryDarkBlue">
             More than just <br />
             shorter links
           </h1>
-          <h3 className=" w-[22rem] text-[1.2rem] md:text-sm md:w-[25rem] md:text-left text-GrayishViolet mt-5">
+          <h3 className=" text-center  text-[1.2rem] md:text-sm md:w-[25rem] md:text-left text-GrayishViolet mt-5">
             Build your brand's recocnition and get detailed insights on how your
             links are performing.
           </h3>

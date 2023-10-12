@@ -7,8 +7,8 @@ const Navbar = () => {
     setOpen((prev) => !prev);
   };
   return (
-    <div>
-      <div className="w-full h-20 flex flex-row items-center  justify-between px-10 md:px-20">
+    <div className="bg-white">
+      <div className="w-full h-20 flex flex-row items-center justify-between px-10 md:px-20 ">
         {/* logo */}
         <div>
           <p className="text-VeryDarkViolet text-3xl font-[900] select-none">
