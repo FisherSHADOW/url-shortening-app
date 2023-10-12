@@ -11,12 +11,12 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Cyan: hsl(180, 66%, 49%)
 - Dark Violet: hsl(257, 27%, 26%)
+- Cyan: hsl(180, 50%, 66%)
+- Red: hsl(0, 87%, 67%)
 
 ### Secondary
 
-- Red: hsl(0, 87%, 67%)
 
 ### Neutral
 
