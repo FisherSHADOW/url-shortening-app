@@ -22,7 +22,7 @@ const Hero = () => {
 
         <div>
           <img
-            className="w-[700px] ml-[2rem] md:w-[700px]  "
+            className="w-[800px] ml-[2rem] md:w-[700px]  "
             src={working}
             alt=" drawing of a person working on computer "
           />
