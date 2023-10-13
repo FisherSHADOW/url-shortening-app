@@ -13,7 +13,7 @@ const Article = () => {
           <h2 className="font-bold text-4xl text-VeryDarkBlue text-center">
             Advance Statistics
           </h2>
-          <p className="px-20 text-center mt-5 text-GrayishViolet">
+          <p className="px-20 text-center mt-5 text-GrayishViolet md:w-[40rem] ">
             Track how your links are performing across the web with our advanced
             statistics dashboard.
           </p>
