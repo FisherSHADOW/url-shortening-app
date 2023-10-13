@@ -45,7 +45,7 @@ const Navbar = () => {
               <button className="p-2 hover:text-VeryDarkViolet">Login</button>
             </li>
             <li>
-              <button className="p-2  bg-primaryCyan rounded-3xl w-32 text-white hover:bg-lightCyan hover:text-VeryDarkViolet">
+              <button className="p-2 bg-primaryCyan rounded-3xl w-32 text-white hover:bg-lightCyan hover:text-VeryDarkViolet">
                 Sign Up
               </button>
             </li>
