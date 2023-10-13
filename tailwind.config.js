@@ -14,8 +14,6 @@ module.exports = {
         lightCyan: "hsl(180, 50%, 66%)",
         background: "#F0F1F6",
       },
-     
-
     },
   },
   plugins: [],

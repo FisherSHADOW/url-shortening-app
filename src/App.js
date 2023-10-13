@@ -3,6 +3,7 @@ import PostLink from "./assets/components/appSection/PostLink";
 import Article from "./assets/components/article/Article";
 import Hero from "./assets/components/hero/Hero";
 import Navbar from "./assets/components/navbar/Navbar";
+import SignUpSection from "./assets/components/signUpSection/SignUpSection";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <MainSection />
       <PostLink />
       <Article />
+      <SignUpSection />
     </div>
   );
 }
