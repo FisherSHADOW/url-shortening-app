@@ -3,7 +3,7 @@ import working from "../../images/illustration-working.svg";
 
 const Hero = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white ">
       {/* hero start */}
       <div className="w-full h-[80vh] flex  flex-col-reverse md:flex-row justify-center items-center text-center md:justify-evenly lg:justify-between xl:justify-around md:items-center py-20 ">
         <div className="md:pl-[4.7rem] md:flex md:flex-col md:gap-1">

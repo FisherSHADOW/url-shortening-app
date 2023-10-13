@@ -21,7 +21,7 @@ const Article = () => {
         {/* line */}
 
         {/* article cards  */}
-        <div className="flex flex-col justify-center items-center gap-y-24 mt-24 pb-24 lg:flex-row lg:gap-7 lg:px-10 lg:max-w-[1440px] lg:h-[600px]  ">
+        <div className="flex flex-col justify-center items-center gap-y-24 mt-24 pb-24 lg:flex-row lg:gap-7 lg:px-10 lg:max-w-[1440px] lg:h-[450px]  ">
           <div className="w-[70%] h-[250px] flex flex-col justify-around items-center bg-white rounded-lg lg:items-start lg:pl-5 lg:place-self-start ">
             <div className="w-[80px] h-[80px] rounded-full flex justify-center items-center bg-DarkViolet mt-[-60px]  ">
               <img src={brandIcon} alt="" />

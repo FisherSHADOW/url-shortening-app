@@ -1,11 +1,13 @@
 import { Menu, X } from "lucide-react";
 import React, { useState } from "react";
+
 // navbar hamburger button and menu
 const Navbar = () => {
   const [open, setOpen] = useState(true);
   const handleMenu = () => {
     setOpen((prev) => !prev);
   };
+
   return (
     <div className="bg-white">
       <div className="w-full h-20 flex flex-row items-center justify-between px-10 md:px-20 ">
