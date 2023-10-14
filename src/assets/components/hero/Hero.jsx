@@ -1,6 +1,5 @@
 import React from "react";
 import working from "../../images/illustration-working.svg";
-import "./hero.css";
 
 const Hero = () => {
   return (

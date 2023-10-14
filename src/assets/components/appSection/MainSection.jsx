@@ -1,11 +1,12 @@
 import React from "react";
+import "../appSection/mainSection.css";
 const MainSection = () => {
   return (
     <div>
       <div className="w-full ">
         {/* link input section  */}
-        <div className=" w-full flex justify-center md:mt-[-80px] pb-16">
-          <div className="flex flex-col md:flex-row justify-around md:px-5 md:gap-5 items-center w-[70%] h-[10rem] bg-DarkViolet rounded-xl">
+        <div className=" w-full flex justify-center md:mt-[-80px]  pb-16 ">
+          <div className="flex flex-col md:flex-row justify-around md:px-5 md:gap-5 items-center w-[70%] h-[10rem] bg-DarkViolet rounded-xl section__bg">
             <input
               className="bg-white w-[90%]  md-[80%] xl:w-[90%] h-[50px] rounded-lg px-4"
               type="text"
