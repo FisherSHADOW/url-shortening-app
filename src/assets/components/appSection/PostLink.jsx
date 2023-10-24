@@ -1,6 +1,6 @@
 import React from "react";
 
-const PostLink = () => {
+const PostLink = ({ data }) => {
   const bg1Url = "../../images/bg-shorten-desktop.svg";
   return (
     <div className="flex justify-center my-3 bg-cover bg-center">
@@ -11,7 +11,7 @@ const PostLink = () => {
           </p>
         </div>
         <div className="w-[90%] md:w-1/2 h-20 flex flex-col justify-center gap-2 items-center bg-center md:flex-row md:justify-end md:px-6 ">
-          <p className="text-primaryCyan   ">www.guthub.com</p>
+          <p className="text-primaryCyan">www.guthub.com</p>
           <button className=" w-[90%] md:w-[150px]  py-2 mb-8 md:mb-0 bg-primaryCyan rounded-lg">
             Copy
           </button>
