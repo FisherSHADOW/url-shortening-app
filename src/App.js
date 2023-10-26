@@ -6,20 +6,23 @@ import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import SignUpSection from "./components/signUpSection/SignUpSection";
 import { BrowserRouter as Router } from "react-router-dom";
+import { NextUIProvider } from "@nextui-org/react";
 
 function App() {
   return (
-    <Router>
-      <div className="App bg-background">
-        <Navbar />
-        <Hero />
-        <MainSection />
-        <PostLink />
-        <Article />
-        <SignUpSection />
-        <Footer />
-      </div>
-    </Router>
+    <NextUIProvider>
+      <Router>
+        <div className="App bg-background">
+          <Navbar />
+          <Hero />
+          <MainSection />
+          <PostLink />
+          <Article />
+          <SignUpSection />
+          <Footer />
+        </div>
+      </Router>
+    </NextUIProvider>
   );
 }
 
