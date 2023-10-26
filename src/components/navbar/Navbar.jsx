@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
 import React, { useState } from "react";
 import { Button } from "@nextui-org/react";
+import { motion } from "framer-motion";
 
 // navbar hamburger button and menu
 const Navbar = () => {
@@ -8,10 +9,24 @@ const Navbar = () => {
   const handleMenu = () => {
     setOpen((prev) => !prev);
   };
-
   return (
     <div className="bg-white flex justify-center  ">
-      <div className="w-full px-10 md:px-0 md:w-[80%] h-20 flex flex-row items-center justify-between ">
+      <motion.div
+        initial={{
+          opacity: 0,
+          scale: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+          scale: 1,
+        }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.5,
+          ease: "easeInOut",
+        }}
+        className="w-full px-10 md:px-0 md:w-[80%] h-20 flex flex-row items-center justify-between "
+      >
         {/* logo */}
         <div>
           <p className="text-VeryDarkViolet text-3xl font-[900] select-none">
@@ -56,7 +71,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </motion.div>
       {/* mobile menu */}
       {!open ? (
         <div className="w-[75%] h-[450px] md:hidden mt-36 mx-auto bg-DarkViolet shadow-VeryDarkViolet shadow-lg flex flex-col justify-center items-center  rounded-xl absolute left-2.5 right-2.5 font-bold text-xl text-white ">

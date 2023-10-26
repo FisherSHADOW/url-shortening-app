@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "@nextui-org/react";
 import { ScrollShadow } from "@nextui-org/react";
+import { motion } from "framer-motion";
 
 const PostLink = ({ data }) => {
   const [copiedIndex, setCopiedIndex] = useState(null);
@@ -12,11 +13,16 @@ const PostLink = ({ data }) => {
     });
   };
   return (
-    <div className="h-[200px]">
+    <div className="h-[170px]">
       {" "}
       <ScrollShadow size={40} hideScrollBar className="h-[400px] shadow-black">
         {data?.map((data, index) => (
-          <div
+          <motion.div
+            initial={{
+              scale: 0.5,
+            }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1, ease: "backOut" }}
             key={index}
             className="flex flex-row justify-center my-3 bg-cover bg-center"
           >
@@ -41,7 +47,7 @@ const PostLink = ({ data }) => {
                 </Button>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </ScrollShadow>
     </div>

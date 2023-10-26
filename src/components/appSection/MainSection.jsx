@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../appSection/mainSection.css";
 import PostLink from "./PostLink";
 import { Button } from "@nextui-org/react";
+import { motion } from "framer-motion";
 const MainSection = () => {
   const [orginalUrl, setOrginalUrl] = useState();
   const [errorMassage, setErrorMassage] = useState();
@@ -65,8 +66,22 @@ const MainSection = () => {
     <div className="relative">
       <div className="w-full ">
         {/* link input section  */}
-        <div className=" w-full flex justify-center md:mt-[-80px]  pb-16 ">
-          <div className="flex flex-col md:flex-row justify-around md:px-5 md:gap-5 items-center w-[70%] h-[10rem] bg-DarkViolet rounded-xl section__bg">
+        <motion.div
+          initial={{
+            opacity: 0,
+            translateY: 500,
+          }}
+          animate={{
+            opacity: 1,
+            translateY: 0,
+          }}
+          transition={{
+            duration: 1,
+            ease: "backInOut",
+          }}
+          className=" w-full flex justify-center md:mt-[-80px]  pb-16 "
+        >
+          <div className="flex flex-col md:flex-row justify-around md:px-5 md:gap-5 items-center w-[82%] h-[10rem] bg-DarkViolet rounded-xl section__bg">
             <input
               value={orginalUrl}
               onChange={(e) => setOrginalUrl(e.target.value)}
@@ -81,7 +96,7 @@ const MainSection = () => {
               Shorten it!
             </Button>
           </div>
-        </div>
+        </motion.div>
         {errorMassage && (
           <div className="absolute w-full text-center ">
             <p className="text-red-500">{errorMassage}</p>
