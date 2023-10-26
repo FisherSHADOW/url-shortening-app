@@ -14,7 +14,7 @@ const PostLink = ({ data }) => {
   return (
     <div className="h-[200px]">
       {" "}
-      <ScrollShadow size={100} hideScrollBar className="h-[400px] shadow-black">
+      <ScrollShadow size={40} hideScrollBar className="h-[400px] shadow-black">
         {data?.map((data, index) => (
           <div
             key={index}
@@ -26,8 +26,8 @@ const PostLink = ({ data }) => {
                   {data.originalUrl || ""}
                 </p>
               </div>
-              <div className="w-[90%]  lg:w-1/2 h-20 flex flex-col  gap-2 items-center bg-center lg:flex-row lg:justify-end lg:px-6 ">
-                <p className="text-primaryCyan text-ellipsis overflow-hidden line-clamp-1 ">
+              <div className="w-[90%]  lg:w-1/2 h-20 flex flex-col gap-2 items-center bg-center lg:flex-row lg:justify-end lg:px-6 ">
+                <p className="text-primaryCyan text-ellipsis md:overflow-hidden md:line-clamp-1 ">
                   {data.shortenedUrl || ""}
                 </p>
 
