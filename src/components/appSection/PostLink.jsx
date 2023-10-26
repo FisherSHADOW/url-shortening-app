@@ -19,14 +19,15 @@ const PostLink = ({ data }) => {
         >
           <div className="w-[70%] h-44 bg-white  rounded-xl flex flex-col justify-between  items-center md:flex-row md:h-28  ">
             <div className=" md:w-1/2 border-b-2 md:border-none px-4 py-4 w-[80%] text-center  ">
-              <p className=" text-ellipsis overflow-hidden ">
+              <p className="line-clamp-1 text-ellipsis overflow-hidden ">
                 {data.originalUrl || ""}
               </p>
             </div>
             <div className="w-[90%] md:w-1/2 h-20 flex flex-col justify-center gap-2 items-center bg-center md:flex-row md:justify-end md:px-6 ">
-              <p className="text-primaryCyan   ">{data.shortenedUrl || ""}</p>
+              <p className="text-primaryCyan">{data.shortenedUrl || ""}</p>
+
               <Button
-                className=" w-[90%] md:w-[150px]  py-2 mb-8 md:mb-0 bg-primaryCyan rounded-lg"
+                className=" w-[90%] md:w-[150px]  py-5 mb-8 md:mb-0 bg-primaryCyan rounded-lg"
                 onClick={() =>
                   copyToClipboard(`https://${data.shortenedUrl}`, index)
                 }

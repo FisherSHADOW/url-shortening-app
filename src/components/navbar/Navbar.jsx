@@ -10,8 +10,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-white ">
-      <div className="w-full h-20 flex flex-row items-center justify-between px-10 md:px-20 xl:px-[17.5rem] ">
+    <div className="bg-white flex justify-center  ">
+      <div className="w-full px-10 md:px-0 md:w-[80%] h-20 flex flex-row items-center justify-between ">
         {/* logo */}
         <div>
           <p className="text-VeryDarkViolet text-3xl font-[900] select-none">
@@ -50,7 +50,7 @@ const Navbar = () => {
               </Button>
             </li>
             <li>
-              <Button className="p-2 bg-primaryCyan rounded-3xl w-32 text-white hover:bg-lightCyan hover:text-VeryDarkViolet">
+              <Button className="p-2 bg-primaryCyan rounded-3xl w-32 shadow-xl text-white hover:bg-lightCyan hover:text-VeryDarkViolet">
                 Sign Up
               </Button>
             </li>
@@ -59,7 +59,7 @@ const Navbar = () => {
       </div>
       {/* mobile menu */}
       {!open ? (
-        <div className="w-[75%] h-[450px] md:hidden mt-10 bg-DarkViolet flex flex-col justify-center items-center m-auto rounded-xl absolute left-2.5 right-2.5 font-bold text-xl text-white ">
+        <div className="w-[75%] h-[450px] md:hidden mt-36 mx-auto bg-DarkViolet shadow-VeryDarkViolet shadow-lg flex flex-col justify-center items-center  rounded-xl absolute left-2.5 right-2.5 font-bold text-xl text-white ">
           <ul className="flex flex-col justify-center items-center gap-10 text-center ">
             <li className=" cursor-pointer">Features</li>
             <li className=" cursor-pointer">Pricing</li>
@@ -71,9 +71,9 @@ const Navbar = () => {
               <button className="hover:text-primaryCyan">Login</button>
             </li>
             <li>
-              <button className="p-2  bg-primaryCyan rounded-3xl w-[300px] font-bold text-xl py-3 text-white hover:bg-lightCyan hover:text-VeryDarkViolet">
+              <Button className="  bg-primaryCyan rounded-3xl w-[300px] font-bold text-xl py-6 shadow-xl text-white hover:bg-lightCyan hover:text-VeryDarkViolet hover:shadow-none">
                 Sign Up
-              </button>
+              </Button>
             </li>
           </ul>
         </div>
