@@ -1,22 +1,25 @@
-import MainSection from "./assets/components/appSection/MainSection";
-import PostLink from "./assets/components/appSection/PostLink";
-import Article from "./assets/components/article/Article";
-import Footer from "./assets/components/footer/Footer";
-import Hero from "./assets/components/hero/Hero";
-import Navbar from "./assets/components/navbar/Navbar";
-import SignUpSection from "./assets/components/signUpSection/SignUpSection";
+import MainSection from "./components/appSection/MainSection";
+import PostLink from "./components/appSection/PostLink";
+import Article from "./components/article/Article";
+import Footer from "./components/footer/Footer";
+import Hero from "./components/hero/Hero";
+import Navbar from "./components/navbar/Navbar";
+import SignUpSection from "./components/signUpSection/SignUpSection";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App bg-background">
-      <Navbar />
-      <Hero />
-      <MainSection />
-      <PostLink />
-      <Article />
-      <SignUpSection />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App bg-background">
+        <Navbar />
+        <Hero />
+        <MainSection />
+        <PostLink />
+        <Article />
+        <SignUpSection />
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

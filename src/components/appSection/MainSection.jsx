@@ -7,10 +7,8 @@ const MainSection = () => {
   const [shortenedUrls, setShortenedUrls] = useState([]);
 
   useEffect(() => {
-    // Load shortenedUrls from localStorage when the component mounts
     const storedUrls = JSON.parse(localStorage.getItem("shortenedData")) || [];
     setShortenedUrls(storedUrls);
-    console.log(shortenedUrls)
   }, []);
 
   const handleGenerate = async () => {
@@ -23,11 +21,13 @@ const MainSection = () => {
       return;
     }
     const apiUrl = "https://owo.vc/api/v2/link";
+
     const requestData = {
       link: orginalUrl,
       generator: "owo",
       metadata: "OWOIFY",
     };
+
     const options = {
       method: "POST",
       headers: {
@@ -42,19 +42,26 @@ const MainSection = () => {
         const result = await response.json();
         setErrorMassage("");
 
-        const existingData =
-          JSON.parse(localStorage.getItem("shorendedData")) || [];
-        existingData.push({
-          originalUrl: orginalUrl,
-          shortenedUrl: result.id,
-        });
+        setShortenedUrls((prev) => [
+          ...prev,
+          { originalUrl: orginalUrl, shortenedUrl: result.id },
+        ]);
 
-        localStorage.setItem("shorendedData", JSON.stringify(existingData));
+        const updatedData = [
+          ...shortenedUrls,
+          { originalUrl: orginalUrl, shortenedUrl: result.id },
+        ];
+
+        localStorage.setItem("shortenedData", JSON.stringify(updatedData));
+      } else {
+        console.error("Failed to shorten url");
       }
-    } catch (err) {}
+    } catch (err) {
+      console.error("an error occurred:", err);
+    }
   };
   return (
-    <div>
+    <div className="relative">
       <div className="w-full ">
         {/* link input section  */}
         <div className=" w-full flex justify-center md:mt-[-80px]  pb-16 ">
@@ -74,9 +81,13 @@ const MainSection = () => {
             </button>
           </div>
         </div>
-        {errorMassage && <p className="text-red-500">{errorMassage}</p>}
+        {errorMassage && (
+          <div className="absolute w-full text-center ">
+            <p className="text-red-500">{errorMassage}</p>
+          </div>
+        )}
       </div>
-      <PostLink data={shortenedUrls} />
+      {shortenedUrls.length > 0 && <PostLink data={shortenedUrls} />}
     </div>
   );
 };

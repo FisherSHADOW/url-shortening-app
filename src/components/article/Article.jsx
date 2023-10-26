@@ -1,7 +1,7 @@
 import React from "react";
-import brandIcon from "../../images/icon-brand-recognition.svg";
-import detailedIcon from "../../images/icon-detailed-records.svg";
-import fullyCustomizeIcon from "../../images/icon-fully-customizable.svg";
+import brandIcon from "../../assets/images/icon-brand-recognition.svg";
+import detailedIcon from "../../assets/images/icon-detailed-records.svg";
+import fullyCustomizeIcon from "../../assets/images/icon-fully-customizable.svg";
 
 const Article = () => {
   return (
