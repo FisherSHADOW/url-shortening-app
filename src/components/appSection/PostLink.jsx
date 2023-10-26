@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "@nextui-org/react";
 
 const PostLink = ({ data }) => {
   const [copiedIndex, setCopiedIndex] = useState(null);
@@ -24,14 +25,14 @@ const PostLink = ({ data }) => {
             </div>
             <div className="w-[90%] md:w-1/2 h-20 flex flex-col justify-center gap-2 items-center bg-center md:flex-row md:justify-end md:px-6 ">
               <p className="text-primaryCyan   ">{data.shortenedUrl || ""}</p>
-              <button
+              <Button
                 className=" w-[90%] md:w-[150px]  py-2 mb-8 md:mb-0 bg-primaryCyan rounded-lg"
                 onClick={() =>
                   copyToClipboard(`https://${data.shortenedUrl}`, index)
                 }
               >
                 {copiedIndex === index ? "Copied" : "Copy"}
-              </button>
+              </Button>
             </div>
           </div>
         </div>

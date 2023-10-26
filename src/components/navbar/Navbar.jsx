@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import React, { useState } from "react";
+import { Button } from "@nextui-org/react";
 
 // navbar hamburger button and menu
 const Navbar = () => {
@@ -44,12 +45,14 @@ const Navbar = () => {
           {/* sign up & login */}
           <ul className="flex flex-row text-GrayishViolet font-bold gap-7 ">
             <li>
-              <button className="p-2 hover:text-VeryDarkViolet">Login</button>
+              <Button className="p-2 bg-transparent rounded-3xl hover:text-VeryDarkViolet">
+                Login
+              </Button>
             </li>
             <li>
-              <button className="p-2 bg-primaryCyan rounded-3xl w-32 text-white hover:bg-lightCyan hover:text-VeryDarkViolet">
+              <Button className="p-2 bg-primaryCyan rounded-3xl w-32 text-white hover:bg-lightCyan hover:text-VeryDarkViolet">
                 Sign Up
-              </button>
+              </Button>
             </li>
           </ul>
         </div>

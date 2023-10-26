@@ -1,5 +1,6 @@
 import React from "react";
 import working from "../../assets/images/illustration-working.svg";
+import { Button } from "@nextui-org/react";
 
 const Hero = () => {
   return (
@@ -15,9 +16,12 @@ const Hero = () => {
             Build your brand's recocnition and get detailed insights on how your
             links are performing.
           </h3>
-          <button className=" py-2 w-36 mt-5 bg-primaryCyan rounded-3xl text-white hover:bg-lightCyan hover:text-VeryDarkViolet">
+          <Button className="py-2 w-36 mt-5 bg-primaryCyan rounded-3xl text-white hover:bg-lightCyan hover:text-VeryDarkViolet">
+            Get started
+          </Button>
+          {/* <button className=" py-2 w-36 mt-5 bg-primaryCyan rounded-3xl text-white hover:bg-lightCyan hover:text-VeryDarkViolet">
             Get Started
-          </button>
+          </button> */}
         </div>
 
         <div>

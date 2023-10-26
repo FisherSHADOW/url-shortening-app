@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../appSection/mainSection.css";
 import PostLink from "./PostLink";
+import { Button } from "@nextui-org/react";
 const MainSection = () => {
   const [orginalUrl, setOrginalUrl] = useState();
   const [errorMassage, setErrorMassage] = useState();
@@ -73,12 +74,12 @@ const MainSection = () => {
               type="text"
               placeholder="shorten a link here..."
             />
-            <button
+            <Button
               onClick={handleGenerate}
-              className="w-[90%]  md:w-[26%] xl:w-[26%] bg-primaryCyan h-[50px] rounded-lg"
+              className="w-[90%]  md:w-[26%] xl:w-[26%] bg-primaryCyan h-[50px] rounded-lg hover:bg-lightCyan hover:text-VeryDarkViolet"
             >
               Shorten it!
-            </button>
+            </Button>
           </div>
         </div>
         {errorMassage && (
