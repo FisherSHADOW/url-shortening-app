@@ -99,7 +99,7 @@ const MainSection = () => {
         </motion.div>
         {errorMassage && (
           <div className="absolute w-full text-center ">
-            <p className="text-red-500">{errorMassage}</p>
+            <p className="text-red-500 mt-[-40px]">{errorMassage}</p>
           </div>
         )}
       </div>
