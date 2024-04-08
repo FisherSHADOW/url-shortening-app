@@ -22,18 +22,18 @@ const MainSection = () => {
       setErrorMassage("url must start with https:// ");
       return;
     }
-    const apiUrl = "https://owo.vc/api/v2/link";
+    const apiUrl = "https://shrtlnk.dev/api/v2/link";
 
     const requestData = {
-      link: orginalUrl,
-      generator: "owo",
-      metadata: "OWOIFY",
+      url: orginalUrl,
     };
 
     const options = {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "api-key": "g5AIvliLjRUWR87wb1g5v6CLALOtoKYj4gTiBepV8jnEe",
+        "Accept": "application/json",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(requestData),
     };
@@ -46,12 +46,12 @@ const MainSection = () => {
 
         setShortenedUrls((prev) => [
           ...prev,
-          { originalUrl: orginalUrl, shortenedUrl: result.id },
+          { originalUrl: orginalUrl, shortenedUrl: result.shrtlnk },
         ]);
 
         const updatedData = [
           ...shortenedUrls,
-          { originalUrl: orginalUrl, shortenedUrl: result.id },
+          { originalUrl: orginalUrl, shortenedUrl: result.shrtlnk },
         ];
 
         localStorage.setItem("shortenedData", JSON.stringify(updatedData));
